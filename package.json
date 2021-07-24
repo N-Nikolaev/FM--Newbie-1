@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/N-Nikolaev/FM--stats-preview-card-component/issues"
   },
-  "homepage": "https://github.com/N-Nikolaev/FM--stats-preview-card-component#readme"
+  "homepage": "https://github.com/N-Nikolaev/FM--stats-preview-card-component#readme",
+  "devDependencies": {
+    "sass": "^1.36.0"
+  }
 }
