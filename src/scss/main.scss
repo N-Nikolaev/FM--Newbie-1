@@ -1,3 +1,33 @@
+// Imports
+@use "sass:math";
+
+// Color Variables
+$main-bg:       hsl(233, 47%, 7%);
+
+$card-bg:       hsl(244, 38%, 16%);
+$card-accent:   hsl(277, 64%, 61%);
+
+$text-main:     hsl(0, 0%, 100%);
+$text-p:        hsla(0, 0%, 100%, 0.75);
+$text-accent:   hsla(0, 0%, 100%, 0.6);
+
+// Mixin
+@for $grid from 1 through 12 {
+    .col-#{$grid} { 
+        width: math.div(100%, 12) * $grid; 
+    }
+}
+
+
 body {
-    background-color: red;
+    background-color: $main-bg;
+    color: $text-main;
+}
+
+.card {
+    background-color: $card-bg;
+}
+
+.text-accent {
+    color: $card-accent;
 }
