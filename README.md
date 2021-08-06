@@ -28,7 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
+**Desktop View**
+
 ![](src/design/screenshot-desktop.png)
+
+**Mobile View**
 
 ![](src/design/screenshot-mobile.png)
 
@@ -43,7 +47,6 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- SASS
 - CSS Grid
 - Mobile-first workflow
 - [SASS](https://sass-lang.com/) - CSS Preprocessor
@@ -118,5 +121,5 @@ Additionally, I will be trying to figure out how to properly use GIT, especially
 
 ## Acknowledgments
 
-I'd like to thank Kevin Powell for his video on ["Escaping Tutorial Hell"](https://youtu.be/QqDH5sYzDS8)(something I've been meaning to do for a long time now) and for his many other tutorial videos which were indispensible to me during the course of this project.
+I'd like to thank Kevin Powell for his video on ["Escaping Tutorial Hell"](https://youtu.be/QqDH5sYzDS8) (something I've been meaning to do for a long time now) and for his many other tutorial videos which were indispensible to me during the course of this project.
 
