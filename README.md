@@ -32,12 +32,10 @@ Users should be able to:
 
 ![](src/design/screenshot-mobile.png)
 
-![](./screenshot.jpg)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/N-Nikolaev/FM--stats-preview-card-component)
+- Live Site URL: [Github Page](https://n-nikolaev.github.io/FM--stats-preview-card-component/)
 
 ## My process
 
@@ -45,62 +43,80 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- SASS
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [SASS](https://sass-lang.com/) - CSS Preprocessor
+- [Parcel](https://parceljs.org/) - Web Application Bundler
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Through this project I was able to learn how to set-up Parcel in order to process my SASS code and bundle everything for distribution. 
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+```json
+"scripts": {
+  "dev": "parcel src/index.html",
+  "build": "parcel build src/index.html"
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+In addition to learning how to be more comfortable with the SASS syntax, I was both able to make create and use media query mixins, as well as use CSS Grid to control the layout of the component. 
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```scss
+// Media Query Mixin
+@mixin mq {
+  @media (min-width: $br--laptop) {
+    @content;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-areas: 
+    "img"
+    "content";
+
+  @include mq {
+    grid-template-areas: 
+      "content img";
+  }
+}
+```
+
+And finally, I was able to find a simple and elegant way in order to blend an image without having to create an overlay element.
+
+```scss
+img {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+```
+
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Moving forward, I have decided to focus on using CSS Grid over Flexbox whenever possible. It has come to light through this project that I struggle when it comes to using Grid to solve problems in which I would usually resort to Flexbox. 
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Additionally, I will be trying to figure out how to properly use GIT, especially subtrees. As a beginner with GIT I have often times found myself having to recreate my gh-pages repository. I have acknowledge my lack basic knowledge of GIT commands and my tenuous grasp on the process of version control to be hindering me. 
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Code Guide by @mdo](https://codeguide.co/) - This was useful when it came to cleanly structuring my SASS code and made it much easier for me to take in what I was writing. I am a big fan of this code guide and will be using it to structure my code in the future. 
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Deploying a subfolder to GitHub Pages](https://gist.github.com/cobyism/4730490) - This was helpful when I needed to find a way to set-up a Github page for my project. Parcel doesn't allow for output directory naming (as far as I know) and so I had to find a work around. I will be using the method outlined inside until I can find a way to serve my GH page form the main repo. 
+
+- [SASS + Parcel Set-up ](https://www.youtube.com/watch?v=wYWf2m_yzBQ) - This video by Kevin Powell is what I followed in order to set up both SASS and Parcel together. I highly recommend it to anyone who wants to dip their toes into Parcel.
+
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Github - [Nikolay Nikolaev](https://github.com/N-Nikolaev)
+- Frontend Mentor - [@N-Nikolaev](https://www.frontendmentor.io/profile/N-Nikolaev)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I'd like to thank Kevin Powell for his video on ["Escaping Tutorial Hell"](https://youtu.be/QqDH5sYzDS8)(something I've been meaning to do for a long time now) and for his many other tutorial videos which were indispensible to me during the course of this project.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
