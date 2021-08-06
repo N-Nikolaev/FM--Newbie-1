@@ -17,11 +17,11 @@ $font-inter:    'Inter', sans-serif;
 $font-lexend:   'Lexend Deca', sans-serif;
 
 //Breakpoints
-$br--tablet:    768px;
+$br--laptop:    1024px;
 
 // Mixins
 @mixin mq {
-    @media (min-width: 768px) {
+    @media (min-width: $br--laptop) {
         @content;
     }
 }
@@ -77,6 +77,7 @@ body {
     @include mq {
         grid-template-areas: 
             "content img";
+        max-width: 1110px;
     }
 
     &__content {
@@ -87,6 +88,8 @@ body {
 
         @include mq {
             text-align: left;
+            padding: 60px;
+            padding-right: 100px;
         }
     }
 
@@ -95,18 +98,24 @@ body {
 
         font-size: 28px;
         line-height: 2.2rem;
+
+        @include mq { font-size: 32px; }
     }
 
     p {
+        margin-right: 0;
         margin-bottom: 1.4rem;
 
         font-weight: 400;
         line-height: 1.6rem;
         color: $text-p;
+
+        @include mq { margin-right: 20px; }
     }
 
     ul {
         display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
 
         font-size: 13px;
@@ -114,7 +123,9 @@ body {
         letter-spacing: 1px;
         color: $text-stat;
 
-        li { margin: 10px 0;}
+        @include mq { grid-template-columns: 1fr 1fr 1fr; }
+
+        li { margin: 10px 0; }
 
         .stat {
             display: block;
@@ -133,9 +144,7 @@ body {
 
         border-radius: 10px 10px 0 0;
 
-        @include mq {
-            border-radius: 0 10px 10px 0;
-        }
+        @include mq { border-radius: 0 10px 10px 0; }
 
         img {
             width: 100%;
@@ -159,16 +168,12 @@ body {
 .hide {
     &--desktop {
         display: none;
-        @include mq {
-            display: block;
-        }
+        @include mq {  display: block; }
     }
 
     &--mobile {
         display: block;
-        @include mq {
-            display: none;
-        }
+        @include mq { display: none; }
     }
 }
 
