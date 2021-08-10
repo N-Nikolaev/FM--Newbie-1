@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/N-Nikolaev/FM--stats-preview-card-component)
-- Live Site URL: [Github Page](https://n-nikolaev.github.io/FM--stats-preview-card-component/)
+- Solution URL: [Github Repository](https://github.com/N-Nikolaev/FM--Newbie-1)
+- Live Site URL: [Github Page](https://n-nikolaev.github.io/FM--Newbie-1)
 
 ## My process
 
